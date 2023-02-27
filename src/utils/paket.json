@@ -1,0 +1,24 @@
+[
+  {
+    "nama_paket": "Reguler",
+    "harga": 24,
+    "service": [
+      "Hotel Madinah",
+      "Amjad Al Salam",
+      "Samiliya Golden",
+      "Hotel Mekkah",
+      "Amjad Al Jazeera",
+      "Tajma Al Barakah"
+    ]
+  },
+  {
+    "nama_paket": "VIP",
+    "harga": 26,
+    "service": ["Hotel Madinah", "Bahauddin", "Golden Al Ansar", "Hotel Mekkah", "Ajyad Makarem", "Rayyanaval Massa"]
+  },
+  {
+    "nama_paket": "VVIP",
+    "harga": 28,
+    "service": ["Hotel Madinah", "Bahauddin", "Golden Al Ansar", "Hotel Mekkah", "Grand Zamzam", "Safwah Royal Orchid"]
+  }
+]

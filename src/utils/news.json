@@ -1,0 +1,44 @@
+{
+  "berita": [
+    {
+      "_id": "1",
+      "judul": "Bidang PHU Tinjau Travel Umrah PT Krakatau Citra Indonesia Pekanbaru",
+      "tanggal": "07 April 2018",
+      "berita_pilihan": true,
+      "img": "/images/berita-1.png",
+      "slug": "Tawarkan Paket Umrah VIP 13 Hari Langsung Madinah."
+    },
+    {
+      "_id": "2",
+      "judul": "Pengangkutan Jamaah Haji 2013",
+      "tanggal": "07 April 2018",
+      "berita_pilihan": false,
+      "img": "/images/berita-2.jpg",
+      "slug": "Pengangkutan Haji 2013 Kampar, Rokan Hulu, Pelalawan"
+    },
+    {
+      "_id": "3",
+      "judul": "Krakatau Tour & Travel Dipercaya Saat Study Banding Sekda Kampar",
+      "tanggal": "07 April 2018",
+      "berita_pilihan": false,
+      "img": "/images/berita-3.jpg",
+      "slug": "Krakatau Tour & Travel Dipercaya Saat Study Banding Sekda Kampar"
+    },
+    {
+      "_id": "4",
+      "judul": "Krakatau Tour & Travel Berangkatan Jamaah Umrah Tahun 2014",
+      "tanggal": "07 April 2018",
+      "berita_pilihan": false,
+      "img": "/images/berita-4.jpg",
+      "slug": "Krakatau Tour & Travel Berangkatkan Jamaah Umrah Tahun 2014"
+    },
+    {
+      "_id": "5",
+      "judul": "Rombongan Wisata Sekda Siak Bagian Pertanahan",
+      "tanggal": "07 April 2018",
+      "berita_pilihan": false,
+      "img": "/images/berita-5.jpg",
+      "slug": "Rombongan Wisata Sekda Siak Bagian Pertanahan"
+    }
+  ]
+}

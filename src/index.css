@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply font-mont relative overflow-x-hidden;
+}
+
+li {
+  @apply font-medium text-base text-white lg:text-black;
+}
