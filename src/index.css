@@ -7,5 +7,5 @@ body {
 }
 
 li {
-  @apply font-medium text-xs  flex justify-center sm:text-base text-black;
+  @apply font-medium text-xs  sm:text-base text-black sm:text-white lg:text-black;
 }

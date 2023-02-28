@@ -25,7 +25,7 @@ const Navbar = () => {
             <img src={logo} alt="logo" className=" h-[50px] sm:h-16 w-auto " />
 
             {/* menu dekstop */}
-            {width < 1024 && (
+            {width > 1024 && (
               <div className=" hidden lg:inline">
                 <ul className="flex gap-7">
                   <li>
@@ -34,12 +34,12 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+                    <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
                       Tentang Kami
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+                    <NavLink to="/paket-umrah" className={({ isActive }) => (isActive ? active : noactive)}>
                       Paket Umrah
                     </NavLink>
                   </li>
@@ -49,7 +49,7 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+                    <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
                       Galeri
                     </NavLink>
                   </li>
@@ -95,12 +95,12 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
                 Tentang Kami
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink to="/paket-umrah" className={({ isActive }) => (isActive ? active : noactive)}>
                 Paket Umrah
               </NavLink>
             </li>
@@ -110,7 +110,7 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/about" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
                 Galeri
               </NavLink>
             </li>

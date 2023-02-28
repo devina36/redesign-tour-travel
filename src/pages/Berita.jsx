@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Berita = () => {
-  return <div>Berita</div>;
+  return <main className="min-h-screen sm:min-h-0">Berita</main>;
 };
 
 export default Berita;
