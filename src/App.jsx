@@ -1,23 +1,40 @@
+import { createContext, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
-
 import Navbar from './components/Navbar';
+import Tabbar from './components/Tabbar';
 import About from './pages/About';
 import Berita from './pages/Berita';
-
+import Galeri from './pages/Galeri';
 import Home from './pages/Home';
+import Umrah from './pages/Umrah';
+
+export const viewportContext = createContext({});
 
 function App() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleWindowResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowResize);
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
+
   return (
-    <>
-      <Navbar />
+    <viewportContext.Provider value={width}>
+      {width > 640 && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tentang-kami" element={<About />} />
         <Route path="/berita" element={<Berita />} />
+        <Route path="/galeri" element={<Galeri />} />
+        <Route path="/paket-umrah" element={<Umrah />} />
       </Routes>
-      <Footer />
-    </>
+      {width > 640 ? <Footer /> : <Tabbar />}
+    </viewportContext.Provider>
   );
 }
 

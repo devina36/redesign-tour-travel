@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { viewportContext } from '../App';
 import hero from '../assets/hero.jpg';
 
 const Hero = () => {
+  const width = useContext(viewportContext);
   return (
-    <section className="  sm:mt-10 lg:mt-20 mb-28 w-full">
-      <div className="container mx-auto xl:px-12 lg:px-8 sm:px-4 flex flex-col lg:flex-row w-full items-center gap-10 sm:gap-20">
-        <div className=" flex flex-col justify-center lg:justify-start sm:w-4/5 lg:w-[45%]">
-          <h1 className=" mx-5 sm:mx-0 text-3xl text-center lg:text-start font-bold sm:text-[32px] lg:leading-[1.5] xl:text-[40px]">
+    <section className=" sm:mt-10 lg:mt-20 sm:mb-28 w-full">
+      <div className="container mx-auto xl:px-12 lg:px-8 sm:px-4 relative flex flex-col lg:flex-row w-full items-center gap-10 sm:gap-20">
+        <div className=" absolute sm:static top-1/2 -translate-y-1/2 sm:translate-y-0 z-10 flex flex-col justify-center lg:justify-start sm:w-4/5 lg:w-[45%]">
+          <h1 className=" px-10  lg:px-0 mx-auto max-w-[380px] sm:max-w-none sm:mx-0 text-xl text-black text-center lg:text-start font-bold sm:text-[32px] sm:leading-[1.5] xl:text-[40px]">
             Bersama Kami, Anda Akan Merasakan Ibadah Yang Luar Biasa
           </h1>
-          <p className=" mx-4 lg:mx-0 text-center lg:text-start text-gray-500 mt-2 mb-5 leading-relaxed">
-            Solusi umrah tanpa banyak transit. Pelayanan berkualitas adalah prioritas kami.
-          </p>
-          <button className=" w-[150px] lg:self-start self-center text-xl bg-[#003300] py-3 text-white font-semibold rounded-lg">
+          {width > 640 && (
+            <p className=" px-10 lg:px-0 mx-auto max-w-[380px] sm:max-w-none lg:mx-0 text-center text-xs sm:text-base lg:text-start text-white sm:text-gray-500 mt-2 sm:leading-relaxed">
+              Solusi umrah tanpa banyak transit. Pelayanan berkualitas adalah prioritas kami.
+            </p>
+          )}
+          <button className=" w-28 sm:w-[150px] text-sm lg:self-start self-center sm:text-xl bg-[#003300] py-2 sm:py-3 text-white mt-5 font-semibold rounded-lg">
             Explore
           </button>
         </div>

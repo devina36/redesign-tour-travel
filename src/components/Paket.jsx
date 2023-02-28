@@ -4,9 +4,9 @@ import { BsCheckCircleFill } from 'react-icons/bs';
 
 const Paket = () => {
   return (
-    <section className="mt-20">
+    <section className=" mt-8 sm:mt-20">
       <div className="container mx-auto px-5 lg:px4 ">
-        <h3 className="text-center text-2xl font-semibold mb-10">Krakatau Umrah Service</h3>
+        <h3 className="text-center text-xl sm:text-2xl font-semibold mb-5 sm:mb-10">Krakatau Umrah Service</h3>
         <div className="flex flex-row lg:justify-center gap-5 lg:gap-8 overflow-x-auto snap-x shadow-inner snap-mandatory scroll-p-5">
           {data.map((items, index) => {
             return (

@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply font-mont relative overflow-x-hidden;
+  @apply font-mont relative overflow-x-hidden min-h-screen;
 }
 
 li {
-  @apply font-medium text-base text-white lg:text-black;
+  @apply font-medium text-xs  flex justify-center sm:text-base text-black;
 }
