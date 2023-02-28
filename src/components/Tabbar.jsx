@@ -56,7 +56,7 @@ const Tabbar = () => {
                   {isActive ? <HiNewspaper size={32} /> : <HiOutlineNewspaper size={20} />}
                 </span>
                 <span className={isActive ? 'flex items-end h-full text-myYellow' : 'flex items-end h-full text-black'}>
-                  Home
+                  Berita
                 </span>
               </div>
             )}
@@ -76,7 +76,7 @@ const Tabbar = () => {
                   {isActive ? <HiCube size={32} /> : <HiOutlineCube size={20} />}
                 </span>
                 <span className={isActive ? 'flex items-end h-full text-myYellow' : 'flex items-end h-full text-black'}>
-                  Home
+                  Umrah
                 </span>
               </div>
             )}
@@ -96,7 +96,7 @@ const Tabbar = () => {
                   {isActive ? <HiPhoto size={32} /> : <HiOutlinePhoto size={20} />}
                 </span>
                 <span className={isActive ? 'flex items-end h-full text-myYellow' : 'flex items-end h-full text-black'}>
-                  Home
+                  Galeri
                 </span>
               </div>
             )}
@@ -116,7 +116,7 @@ const Tabbar = () => {
                   {isActive ? <HiUserGroup size={32} /> : <HiOutlineUserGroup size={20} />}
                 </span>
                 <span className={isActive ? 'flex items-end h-full text-myYellow' : 'flex items-end h-full text-black'}>
-                  Home
+                  About
                 </span>
               </div>
             )}
