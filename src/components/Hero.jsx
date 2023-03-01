@@ -48,7 +48,7 @@ const Hero = () => {
             <button
               onClick={showPaket}
               ref={ref}
-              className=" min-w-28 sm:min-w-[150px] text-sm lg:self-start self-center sm:text-xl bg-[#003300] py-2 sm:py-3 text-white mt-5 font-semibold rounded-lg"
+              className=" w-28 sm:w-[150px] text-sm lg:self-start self-center sm:text-xl bg-[#003300] py-2 sm:py-3 text-white mt-5 font-semibold rounded-lg"
             >
               Explore
             </button>
