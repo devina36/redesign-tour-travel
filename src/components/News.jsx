@@ -1,19 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import news from '../utils/news.json';
 
 const News = () => {
-  // const pilihan = news.berita.filter((item) => item.berita_pilihan === true);
-
-  // const berita = news.berita.filter((item) => item.berita_pilihan === false);
-
-  // const terkini = pilihan[0];
-
   return (
     <section className=" mt-8 sm:mt-20 bg-[#e0ae0f] bg-opacity-20">
       <div className="container mx-auto px-4 pt-8 pb-10 sm:py-16">
         <div className="flex justify-between items-end mb-5">
           <h3 className="text-center text-2xl font-semibold">Berita Terkini</h3>
-          <p className="text-[#003300] underline">Berita lainnya...</p>
+          <Link to="/berita">
+            <p className="text-[#003300] underline">Berita lainnya...</p>
+          </Link>
         </div>
         <div className="grid grid-flow-col sm:grid-flow-row overflow-y-auto scroll-auto overscroll-x-contain snap-x snap-mandatory sm:grid-cols-4 gap-3">
           {news.berita.map((item, i) => {

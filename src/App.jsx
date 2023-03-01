@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import ScrollTop from './components/ScrollTop';
 import Tabbar from './components/Tabbar';
 import About from './pages/About';
 import Berita from './pages/Berita';
@@ -25,7 +26,8 @@ function App() {
 
   return (
     <viewportContext.Provider value={width}>
-      {width > 640 && <Navbar />}
+      <ScrollTop />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tentang-kami" element={<About />} />
