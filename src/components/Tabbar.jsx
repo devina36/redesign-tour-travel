@@ -20,8 +20,8 @@ const noactive = ' flex flex-col justify-center items-center relative w-fit';
 const Tabbar = () => {
   const width = useContext(viewportContext);
   return (
-    <footer className=" sticky  bottom-0 px-10 py-4 bg-white">
-      <ul className="flex flex-row  justify-between ">
+    <footer className=" sticky shadows bottom-0 px-10 py-4 bg-white">
+      <ul className="flex flex-row justify-between ">
         <li>
           <NavLink to="/" end>
             {({ isActive }) => (

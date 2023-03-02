@@ -14,12 +14,12 @@ const Navbar = () => {
   const width = useContext(viewportContext);
 
   const date = new Date();
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const options = { year: 'numeric', month: 'long', day: 'numeric', localeMatcher: 'best fit' };
 
   const formatMasehi = new Intl.DateTimeFormat('id', options);
-  const formatHijri = new Intl.DateTimeFormat('az-u-ca-islamic-umalqura', options);
-  const hijri = formatHijri.format(date);
   const masehi = formatMasehi.format(date);
+  const formatHijri = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', options);
+  const hijri = formatHijri.format(date);
 
   const handleMobile = () => {
     setMobile(!mobile);
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       <header className="w-full top-0 sm:sticky bg-transparent sm:bg-white/80 z-50 backdrop-blur bg-opacity-80">
-        <nav className="container mx-auto lg:px-8 px-4 pt-3 sm:py-5 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
+        <nav className="container mx-auto lg:px-8 px-4 pt-2 sm:py-2 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
           <div className="flex justify-center items-center flex-col">
             <img src={logo} alt="logo" className=" h-[50px] sm:h-16 w-fit " />
             {width < 640 && <h1 className="text-xs">Pelayanan berkualitas adalah prioritas kami</h1>}
@@ -81,8 +81,10 @@ const Navbar = () => {
             </button>
           )}
 
-          <div className="text-xs text-center text-myGreen mt-2 lg:hidden">
-            {hijri} <span className="text-sm text-myYellow">|</span> {masehi}
+          <div className="text-xs text-center text-myGreen mt-2 lg:hidden flex justify-center gap-[5px]">
+            <p>{hijri}</p>
+            <span className="text-sm text-myYellow">|</span>
+            <p>{masehi}</p>
           </div>
         </nav>
       </header>
@@ -100,27 +102,35 @@ const Navbar = () => {
 
           <ul className="flex flex-col gap-7">
             <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink onClick={handleMobile} to="/" className={({ isActive }) => (isActive ? active : noactive)}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink
+                onClick={handleMobile}
+                to="/tentang-kami"
+                className={({ isActive }) => (isActive ? active : noactive)}
+              >
                 Tentang Kami
               </NavLink>
             </li>
             <li>
-              <NavLink to="/paket-umrah" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink
+                onClick={handleMobile}
+                to="/paket-umrah"
+                className={({ isActive }) => (isActive ? active : noactive)}
+              >
                 Paket Umrah
               </NavLink>
             </li>
             <li>
-              <NavLink to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink onClick={handleMobile} to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
                 Berita
               </NavLink>
             </li>
             <li>
-              <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
+              <NavLink onClick={handleMobile} to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
                 Galeri
               </NavLink>
             </li>

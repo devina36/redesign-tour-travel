@@ -18,7 +18,8 @@ const Hero = () => {
         top: ref.current.offsetTop + 700,
         behavior: 'smooth',
       });
-    } else {
+    }
+    if (width > 1023) {
       window.scrollTo({
         top: ref.current.offsetTop + 600,
         behavior: 'smooth',
