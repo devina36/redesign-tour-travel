@@ -1,6 +1,7 @@
 import React from 'react';
 import data from '../utils/paket.json';
 import { BsCheckCircleFill } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Paket = () => {
   return (
@@ -19,9 +20,11 @@ const Paket = () => {
                   IDR {items.harga}
                   <span className=" font-medium text-lg sm:text-xl">Jt</span>
                 </h5>
-                <button className="w-full text-sm sm:text-base text-white bg-[#dc8c00] py-2 font-semibold rounded-lg my-3 sm:my-5">
-                  Daftar
-                </button>
+                <Link to="/daftar-umrah">
+                  <button className="w-full text-sm sm:text-base text-white bg-[#dc8c00] py-2 font-semibold rounded-lg my-3 sm:my-5">
+                    Daftar
+                  </button>
+                </Link>
 
                 <p className="font-medium text-xs sm:text-sm mb-3">Services</p>
 

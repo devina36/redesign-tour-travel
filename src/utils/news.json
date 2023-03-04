@@ -7,7 +7,8 @@
       "berita_pilihan": true,
       "img": "/images/berita-1.png",
       "slug": "Tawarkan Paket Umrah VIP 13 Hari Langsung Madinah.",
-      "mini_desc": " Tawarkan Paket Umrah VIP 13 Hari Langsung Madinah. Perdana terbang pada 9 November 2017 via Lion Air Boeing 737 Max 8 dengan jumlah jamaah 43 orang."
+      "desc": "<p>test</p>",
+      "mini_desc": "Tawarkan Paket Umrah VIP 13 Hari Langsung Madinah. Perdana terbang pada 9 November 2017 via Lion Air Boeing 737 Max 8 dengan jumlah jamaah 43 orang."
     },
     {
       "_id": "2",
@@ -15,7 +16,8 @@
       "tanggal": "07 April 2018",
       "berita_pilihan": false,
       "img": "/images/berita-2.jpg",
-      "slug": "Pengangkutan Haji 2013 Kampar, Rokan Hulu, Pelalawan"
+      "slug": "Pengangkutan Haji 2013 Kampar, Rokan Hulu, Pelalawan",
+      "desc": "<p>test</p>"
     },
     {
       "_id": "3",
@@ -23,7 +25,8 @@
       "tanggal": "07 April 2018",
       "berita_pilihan": false,
       "img": "/images/berita-3.jpg",
-      "slug": "Krakatau Tour & Travel Dipercaya Saat Study Banding Sekda Kampar"
+      "slug": "Krakatau Tour & Travel Dipercaya Saat Study Banding Sekda Kampar",
+      "desc": "<p>test</p>"
     },
     {
       "_id": "4",
@@ -31,7 +34,8 @@
       "tanggal": "07 April 2018",
       "berita_pilihan": false,
       "img": "/images/berita-4.jpg",
-      "slug": "Krakatau Tour & Travel Berangkatkan Jamaah Umrah Tahun 2014"
+      "slug": "Krakatau Tour & Travel Berangkatkan Jamaah Umrah Tahun 2014",
+      "desc": "<p>test</p>"
     },
     {
       "_id": "5",
@@ -39,7 +43,8 @@
       "tanggal": "07 April 2018",
       "berita_pilihan": false,
       "img": "/images/berita-5.jpg",
-      "slug": "Rombongan Wisata Sekda Siak Bagian Pertanahan"
+      "slug": "Rombongan Wisata Sekda Siak Bagian Pertanahan",
+      "desc": "<p>test</p>"
     }
   ],
   "video": [

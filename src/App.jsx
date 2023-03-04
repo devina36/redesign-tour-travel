@@ -6,6 +6,8 @@ import ScrollTop from './components/ScrollTop';
 import Tabbar from './components/Tabbar';
 import About from './pages/About';
 import Berita from './pages/Berita';
+import Daftar from './pages/Daftar';
+import { DetaiBerita } from './pages/DetaiBerita';
 import Galeri from './pages/Galeri';
 import Home from './pages/Home';
 import Umrah from './pages/Umrah';
@@ -32,8 +34,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/tentang-kami" element={<About />} />
         <Route path="/berita" element={<Berita />} />
+        <Route path="/berita/:id" element={<DetaiBerita />} />
         <Route path="/galeri" element={<Galeri />} />
         <Route path="/paket-umrah" element={<Umrah />} />
+        <Route path="/daftar-umrah" element={<Daftar />} />
       </Routes>
       {width > 640 ? <Footer /> : <Tabbar />}
     </viewportContext.Provider>

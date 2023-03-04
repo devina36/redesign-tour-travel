@@ -18,6 +18,6 @@ li {
   @apply w-full rounded-lg py-2 px-5 border-2 shadow-md border-myGreen/30;
 }
 
-.min-h {
+/* .min-h {
   min-height: calc(100vh - 86px);
-}
+} */

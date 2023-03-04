@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { viewportContext } from '../App';
@@ -76,9 +76,11 @@ const Navbar = () => {
               <FiMenu size={30} />
             </button>
           ) : (
-            <button className="bg-myYellow px-5 py-2 text-white font-semibold rounded-lg hidden lg:inline">
-              Daftar Umrah
-            </button>
+            <Link to="/daftar-umrah">
+              <button className="bg-myYellow px-5 py-2 text-white font-semibold rounded-lg hidden lg:inline">
+                Daftar Umrah
+              </button>
+            </Link>
           )}
 
           <div className="text-xs text-center text-myGreen mt-2 lg:hidden flex justify-center gap-[5px]">

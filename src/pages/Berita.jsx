@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { MdSearch } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import { viewportContext } from '../App';
 import CardNews from '../components/CardNews';
 import news from '../utils/news.json';
@@ -29,17 +30,19 @@ const Berita = () => {
                   </div>
                   <div className="col-span-3 lg:col-span-1 mt-5">
                     <span className="px-4 bg-myYellow/30 rounded-full text-myGreen text-sm py-1">{item.tanggal}</span>
-                    <h2 className=" text-black xl:leading-relaxed font-bold text-2xl hover:underline cursor-pointer mt-2">
-                      {item.judul}
-                    </h2>
+                    <Link to={`/berita/${item._id}`}>
+                      <h2 className=" text-black xl:leading-relaxed font-bold text-2xl hover:underline cursor-pointer mt-2">
+                        {item.judul}
+                      </h2>
+                    </Link>
                     <p className="hidden sm:block text-black mt-3">{item.mini_desc}</p>
                   </div>
                 </article>
               ) : (
-                <CardNews key={i} data={item} />
+                <CardNews key={i} link={`/berita/${item._id}`} data={item} />
               )
             ) : (
-              <CardNews key={i} data={item} />
+              <CardNews key={i} data={item} link={`/berita/${item._id}`} />
             );
           })}
         </div>
