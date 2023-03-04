@@ -13,3 +13,11 @@ li {
 .shadows {
   box-shadow: 0px -10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+
+.input-contact {
+  @apply w-full rounded-lg py-2 px-5 border-2 shadow-md border-myGreen/30;
+}
+
+.min-h {
+  min-height: calc(100vh - 86px);
+}

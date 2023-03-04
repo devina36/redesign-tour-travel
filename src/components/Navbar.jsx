@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <>
       <header className="w-full top-0 sm:sticky bg-transparent sm:bg-white/80 z-50 backdrop-blur bg-opacity-80">
-        <nav className="container mx-auto lg:px-8 px-4 pt-2 sm:py-2 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
+        <nav className="container mx-auto lg:px-8 px-4 pt-2 sm:py-4 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
           <div className="flex justify-center items-center flex-col">
             <img src={logo} alt="logo" className=" h-[50px] sm:h-16 w-fit " />
             {width < 640 && <h1 className="text-xs">Pelayanan berkualitas adalah prioritas kami</h1>}
@@ -44,8 +44,8 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
-                    Tentang Kami
+                  <NavLink to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
+                    Berita
                   </NavLink>
                 </li>
                 <li>
@@ -54,13 +54,13 @@ const Navbar = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
-                    Berita
+                  <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
+                    Galeri
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
-                    Galeri
+                  <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
+                    Tentang Kami
                   </NavLink>
                 </li>
               </ul>
@@ -107,12 +107,8 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li>
-              <NavLink
-                onClick={handleMobile}
-                to="/tentang-kami"
-                className={({ isActive }) => (isActive ? active : noactive)}
-              >
-                Tentang Kami
+              <NavLink onClick={handleMobile} to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
+                Galeri
               </NavLink>
             </li>
             <li>
@@ -129,13 +125,18 @@ const Navbar = () => {
                 Berita
               </NavLink>
             </li>
+
             <li>
-              <NavLink onClick={handleMobile} to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
-                Galeri
+              <NavLink
+                onClick={handleMobile}
+                to="/tentang-kami"
+                className={({ isActive }) => (isActive ? active : noactive)}
+              >
+                Tentang Kami
               </NavLink>
             </li>
           </ul>
-          <button className="mt-8 bg-myYellow w-full px-3 py-2 text-white font-semibold rounded-lg ">
+          <button className="mt-8 bg-myYellow w-full px-3 py-3 text-white font-semibold rounded-lg ">
             Daftar Umrah
           </button>
         </nav>

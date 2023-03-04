@@ -8,7 +8,7 @@ import asita from '../assets/asita.png';
 const Footer = () => {
   return (
     <footer className="bg-[#003300]">
-      <div className="container mx-auto px-4 pt-20 pb-8 grid grid-cols-12 gap-x-5 gap-y-10 lg:gap-x-10">
+      <div className="container mx-auto px-4 pt-20 pb-8 grid grid-cols-12 gap-x-5 place-content-between gap-y-10 lg:gap-x-10">
         <div className=" col-span-12 sm:col-span-6 lg:col-span-3 xl:col-span-4">
           <img src={logo} alt="logos" className="h-24 w-auto mb-8" />
           <h5 className="text-gray-100 w-3/5 lg:w-full xl:w-3/5 font-medium text-xs lg:text-sm tracking-wider">

@@ -41,5 +41,21 @@
       "img": "/images/berita-5.jpg",
       "slug": "Rombongan Wisata Sekda Siak Bagian Pertanahan"
     }
+  ],
+  "video": [
+    {
+      "_id": "90",
+      "judul": "Video Krakatau Sediakan Layanan Penerbangan Umrah",
+      "tanggal": "24 April 2018",
+      "img": "/images/video-2.jpg",
+      "slug": "Deskripsi Singkat Krakatau Sediakan Layanan Penerbangan Umrah"
+    },
+    {
+      "_id": "91",
+      "judul": "Video Krakatau Sediakan Layanan Umrah Ramadhan",
+      "tanggal": "24 April 2018",
+      "img": "/images/video-1.jpg",
+      "slug": "Deskripsi Singkat Krakatau Sediakan Layanan Penerbangan Umrah"
+    }
   ]
 }

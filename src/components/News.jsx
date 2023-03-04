@@ -7,7 +7,7 @@ const News = () => {
     <section className=" mt-8 sm:mt-20 bg-[#e0ae0f] bg-opacity-20">
       <div className="container mx-auto px-4 pt-8 pb-10 sm:py-16">
         <div className="flex justify-between items-end mb-5">
-          <h3 className="text-center text-2xl font-semibold">Berita Terkini</h3>
+          <h3 className="text-center text-xl sm:text-2xl font-semibold">Berita Terkini</h3>
           <Link to="/berita">
             <p className="text-[#003300] underline">Berita lainnya...</p>
           </Link>
