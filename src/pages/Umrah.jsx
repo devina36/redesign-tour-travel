@@ -2,12 +2,15 @@ import React from 'react';
 import CardNews from '../components/CardNews';
 import news from '../utils/news.json';
 import { MdSearch } from 'react-icons/md';
+import Navbar from '../components/Navbar';
 
 const Umrah = () => {
   return (
-    <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
-      {/* <div className=" container mx-auto xl:px-12 lg:px-8 sm:px-4 px-5 ">
-        <div className="flex relative w-full md:w-3/5 lg:w-2/5 mx-auto justify-center items-center mb-8">
+    <>
+      <Navbar fixed={true} />
+      <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
+        {/* <div className=" container mx-auto xl:px-12 lg:px-8 sm:px-4 px-5 ">
+        <div className="flex relative w-full w-3/5 lg:w-2/5 mx-auto justify-center items-center mb-8">
           <input
             type="text"
             placeholder="Search ..."
@@ -23,7 +26,8 @@ const Umrah = () => {
           })}
         </div>
       </div> */}
-    </main>
+      </main>
+    </>
   );
 };
 

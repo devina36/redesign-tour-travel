@@ -9,7 +9,7 @@ const active =
 const noactive =
   'relative w-fit hover:before:absolute hover:before:w-full hover:before:h-1 hover:before:rounded-full hover:before:bg-myYellow hover:before:-bottom-1 hover:before:animate-slideLeft';
 
-const Navbar = () => {
+const Navbar = ({ fixed }) => {
   const [mobile, setMobile] = useState(false);
   const width = useContext(viewportContext);
 
@@ -27,7 +27,11 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="w-full top-0 sm:sticky bg-transparent sm:bg-white/80 z-50 backdrop-blur bg-opacity-80">
+      <header
+        className={` ${
+          fixed === true ? ' bg-white/50 backdrop-blur' : 'sm:absolute'
+        } w-full top-0 bg-transparent z-50 bg-opacity-80`}
+      >
         <nav className="container mx-auto lg:px-8 px-4 pt-2 sm:py-4 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
           <div className="flex justify-center items-center flex-col">
             <img src={logo} alt="logo" className=" h-[50px] sm:h-16 w-fit " />
@@ -38,27 +42,47 @@ const Navbar = () => {
           {width > 1023 && (
             <div className=" hidden lg:inline">
               <ul className="flex gap-7">
-                <li>
+                <li
+                  className={`font-medium text-xs  sm:text-base text-black ${
+                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                  }`}
+                >
                   <NavLink to="/" className={({ isActive }) => (isActive ? active : noactive)}>
                     Home
                   </NavLink>
                 </li>
-                <li>
+                <li
+                  className={`font-medium text-xs  sm:text-base text-black ${
+                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                  }`}
+                >
                   <NavLink to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
                     Berita
                   </NavLink>
                 </li>
-                <li>
+                <li
+                  className={`font-medium text-xs  sm:text-base text-black ${
+                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                  }`}
+                >
                   <NavLink to="/paket-umrah" className={({ isActive }) => (isActive ? active : noactive)}>
                     Paket Umrah
                   </NavLink>
                 </li>
-                <li>
+                <li
+                  className={`font-medium text-xs  sm:text-base text-black ${
+                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                  }`}
+                >
                   <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
                     Galeri
                   </NavLink>
                 </li>
-                <li>
+                <li
+                  className={`font-medium text-xs  sm:text-base text-black ${
+                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                  }`}
+                >
                   <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
                     Tentang Kami
                   </NavLink>

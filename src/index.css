@@ -7,7 +7,7 @@ body {
 }
 
 li {
-  @apply font-medium text-xs  sm:text-base text-black sm:text-white lg:text-black;
+  @apply font-medium text-xs  sm:text-base text-black sm:text-white;
 }
 
 .shadows {

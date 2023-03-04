@@ -29,7 +29,6 @@ function App() {
   return (
     <viewportContext.Provider value={width}>
       <ScrollTop />
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tentang-kami" element={<About />} />
