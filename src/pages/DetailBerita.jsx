@@ -2,15 +2,13 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import news from '../utils/news.json';
 import { MdArrowBack } from 'react-icons/md';
-import Navbar from '../components/Navbar';
 
-export const DetaiBerita = () => {
+const DetailBerita = () => {
   const { id } = useParams();
   const data = news.berita.filter((item) => item._id === id);
 
   return (
     <>
-      <Navbar fixed={true} />
       <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
         <section className="container xl:px-12 lg:px-8 sm:px-4 px-5 w-full sm:w-4/5 lg:w-3/5 mx-auto mb-10">
           <Link to={-1}>
@@ -26,3 +24,5 @@ export const DetaiBerita = () => {
     </>
   );
 };
+
+export default DetailBerita;

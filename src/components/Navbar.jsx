@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from 'react';
+import { Link, NavLink, useMatch } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { viewportContext } from '../App';
@@ -9,9 +9,21 @@ const active =
 const noactive =
   'relative w-fit hover:before:absolute hover:before:w-full hover:before:h-1 hover:before:rounded-full hover:before:bg-myYellow hover:before:-bottom-1 hover:before:animate-slideLeft';
 
-const Navbar = ({ fixed }) => {
+const Navbar = () => {
   const [mobile, setMobile] = useState(false);
+  const [headerColor, setHeaderColor] = useState(false);
   const width = useContext(viewportContext);
+  const isHome = useMatch('/');
+
+  const listenScrollEvent = () => {
+    if (isHome) {
+      window.scrollY > 70 ? setHeaderColor(true) : setHeaderColor(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+  });
 
   const date = new Date();
   const options = { year: 'numeric', month: 'long', day: 'numeric', localeMatcher: 'best fit' };
@@ -27,10 +39,22 @@ const Navbar = ({ fixed }) => {
 
   return (
     <>
+      {isHome && width > 640 ? (
+        <marquee direction="left" className="bg-myYellow text-white -mb-2 py-1 lg:order-first">
+          Breaking News: Bidang PHU Tinjau Travel Umrah PT Krakatau Citra Indonesia Pekanbaru
+        </marquee>
+      ) : (
+        ''
+      )}
+
       <header
         className={` ${
-          fixed === true ? ' bg-white/50 backdrop-blur' : 'sm:absolute'
-        } w-full top-0 bg-transparent z-50 bg-opacity-80`}
+          !isHome
+            ? ' bg-white/50 backdrop-blur top-0 sm:sticky'
+            : `transition-all sm:fixed duration-200 ease-in-out ${
+                headerColor ? 'bg-white/50 backdrop-blur shadow-md top-0' : 'bg-transparent top-8'
+              }`
+        } w-full bg-transparent z-50 bg-opacity-80`}
       >
         <nav className="container mx-auto lg:px-8 px-4 pt-2 sm:py-4 flex justify-center flex-col sm:flex-row sm:justify-between flex-wrap sm:items-center">
           <div className="flex justify-center items-center flex-col">
@@ -44,7 +68,7 @@ const Navbar = ({ fixed }) => {
               <ul className="flex gap-7">
                 <li
                   className={`font-medium text-xs  sm:text-base text-black ${
-                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                    !isHome ? 'sm:text-black' : `${headerColor ? 'sm:text-black' : 'sm:text-white'}`
                   }`}
                 >
                   <NavLink to="/" className={({ isActive }) => (isActive ? active : noactive)}>
@@ -53,7 +77,7 @@ const Navbar = ({ fixed }) => {
                 </li>
                 <li
                   className={`font-medium text-xs  sm:text-base text-black ${
-                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                    !isHome ? 'sm:text-black' : `${headerColor ? 'sm:text-black' : 'sm:text-white'}`
                   }`}
                 >
                   <NavLink to="/berita" className={({ isActive }) => (isActive ? active : noactive)}>
@@ -62,7 +86,7 @@ const Navbar = ({ fixed }) => {
                 </li>
                 <li
                   className={`font-medium text-xs  sm:text-base text-black ${
-                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                    !isHome ? 'sm:text-black' : `${headerColor ? 'sm:text-black' : 'sm:text-white'}`
                   }`}
                 >
                   <NavLink to="/paket-umrah" className={({ isActive }) => (isActive ? active : noactive)}>
@@ -71,7 +95,7 @@ const Navbar = ({ fixed }) => {
                 </li>
                 <li
                   className={`font-medium text-xs  sm:text-base text-black ${
-                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                    !isHome ? 'sm:text-black' : `${headerColor ? 'sm:text-black' : 'sm:text-white'}`
                   }`}
                 >
                   <NavLink to="/galeri" className={({ isActive }) => (isActive ? active : noactive)}>
@@ -80,7 +104,7 @@ const Navbar = ({ fixed }) => {
                 </li>
                 <li
                   className={`font-medium text-xs  sm:text-base text-black ${
-                    fixed === true ? 'sm:text-black' : 'sm:text-white'
+                    !isHome ? 'sm:text-black' : `${headerColor ? 'sm:text-black' : 'sm:text-white'}`
                   }`}
                 >
                   <NavLink to="/tentang-kami" className={({ isActive }) => (isActive ? active : noactive)}>
@@ -95,7 +119,7 @@ const Navbar = ({ fixed }) => {
           {width > 640 && width < 1024 ? (
             <button
               onClick={handleMobile}
-              className="lg:hidden text-myYellow order-last py-1 px-3 rounded-lg border-2 border-[#003300] active:bg-[#003300] active:text-white "
+              className="lg:hidden bg-myGreen text-white order-last py-1 px-3 rounded-lg border-2 border-myYellow active:bg-myYellow active:text-white "
             >
               <FiMenu size={30} />
             </button>
@@ -107,7 +131,11 @@ const Navbar = ({ fixed }) => {
             </Link>
           )}
 
-          <div className="text-xs text-center text-myGreen mt-2 lg:hidden flex justify-center gap-[5px]">
+          <div
+            className={`text-xs text-center text-myGreen mt-2 lg:hidden flex justify-center gap-[5px] ${
+              !isHome ? 'sm:text-myGreen' : `${headerColor ? 'sm:text-myGreen' : 'sm:text-white'}`
+            }`}
+          >
             <p>{hijri}</p>
             <span className="text-sm text-myYellow">|</span>
             <p>{masehi}</p>

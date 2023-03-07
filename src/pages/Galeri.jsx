@@ -7,7 +7,6 @@ import Navbar from '../components/Navbar';
 const Galeri = () => {
   return (
     <>
-      <Navbar fixed={true} />
       <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
         <div className=" container mx-auto xl:px-12 lg:px-8 sm:px-4 px-5 ">
           <div className="flex relative w-full sm:w-3/5 lg:w-2/5 mx-auto justify-center items-center mb-8">
@@ -22,7 +21,7 @@ const Galeri = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {news.video.map((item, i) => {
-              return <CardNews key={i} data={item} />;
+              return <CardNews key={i} link={`/galeri/${item._id}`} data={item} />;
             })}
           </div>
         </div>

@@ -9,7 +9,7 @@ const Paket = () => {
       <div className="container mx-auto px-5 lg:px-4 ">
         <h3 className="text-center text-xl sm:text-2xl font-semibold mb-5 sm:mb-10">Krakatau Umrah Service</h3>
         <div className="flex flex-row lg:justify-center gap-5 lg:gap-8 overflow-x-auto snap-x snap-mandatory scroll-p-5">
-          {data.map((items, index) => {
+          {data.home.map((items, index) => {
             return (
               <div
                 key={index}

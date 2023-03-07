@@ -1,24 +1,125 @@
-[
-  {
-    "nama_paket": "Reguler",
-    "harga": 24,
-    "service": [
-      "Hotel Madinah",
-      "Amjad Al Salam",
-      "Samiliya Golden",
-      "Hotel Mekkah",
-      "Amjad Al Jazeera",
-      "Tajma Al Barakah"
-    ]
-  },
-  {
-    "nama_paket": "VIP",
-    "harga": 26,
-    "service": ["Hotel Madinah", "Bahauddin", "Golden Al Ansar", "Hotel Mekkah", "Ajyad Makarem", "Rayyanaval Massa"]
-  },
-  {
-    "nama_paket": "VVIP",
-    "harga": 28,
-    "service": ["Hotel Madinah", "Bahauddin", "Golden Al Ansar", "Hotel Mekkah", "Grand Zamzam", "Safwah Royal Orchid"]
-  }
-]
+{
+  "home": [
+    {
+      "nama_paket": "Reguler",
+      "harga": 24,
+      "service": [
+        "Hotel Madinah",
+        "Amjad Al Salam",
+        "Samiliya Golden",
+        "Hotel Mekkah",
+        "Amjad Al Jazeera",
+        "Tajma Al Barakah"
+      ]
+    },
+    {
+      "nama_paket": "VIP",
+      "harga": 26,
+      "service": ["Hotel Madinah", "Bahauddin", "Golden Al Ansar", "Hotel Mekkah", "Ajyad Makarem", "Rayyanaval Massa"]
+    },
+    {
+      "nama_paket": "VVIP",
+      "harga": 28,
+      "service": [
+        "Hotel Madinah",
+        "Bahauddin",
+        "Golden Al Ansar",
+        "Hotel Mekkah",
+        "Grand Zamzam",
+        "Safwah Royal Orchid"
+      ]
+    }
+  ],
+  "all": [
+    {
+      "_id": 123,
+      "judul": "Umrah 21 Januari 2019 Medan - Madinah",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 23750000,
+      "triple": 1000000,
+      "double": 1000000,
+      "paket": "reguler"
+    },
+    {
+      "_id": 124,
+      "judul": "Umrah 13 November 2018 Pekanbaru - Madinah",
+      "by": "Lion Air",
+      "durasi": 11,
+      "quad": 25350000,
+      "triple": 1000000,
+      "double": 2750000,
+      "paket": "vip"
+    },
+    {
+      "_id": 125,
+      "judul": "Pekanbaru Ramadhan 2019",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 33750000,
+      "triple": 2000000,
+      "double": 2500000,
+      "paket": "vvip"
+    },
+    {
+      "_id": 126,
+      "judul": "Umrah 21 Januari 2019 Medan - Madinah",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 23750000,
+      "triple": 1000000,
+      "double": 1000000,
+      "paket": "reguler"
+    },
+    {
+      "_id": 127,
+      "judul": "Umrah 13 November 2018 Pekanbaru - Madinah",
+      "by": "Lion Air",
+      "durasi": 11,
+      "quad": 25350000,
+      "triple": 1000000,
+      "double": 2750000,
+      "paket": "vip"
+    },
+    {
+      "_id": 128,
+      "judul": "Pekanbaru Ramadhan 2019",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 33750000,
+      "triple": 2000000,
+      "double": 2500000,
+      "paket": "vvip"
+    },
+    {
+      "_id": 129,
+      "judul": "Umrah 21 Januari 2019 Medan - Madinah",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 23750000,
+      "triple": 1000000,
+      "double": 1000000,
+      "paket": "reguler"
+    },
+    {
+      "_id": 130,
+      "judul": "Umrah 13 November 2018 Pekanbaru - Madinah",
+      "by": "Lion Air",
+      "durasi": 11,
+      "quad": 25350000,
+      "triple": 1000000,
+      "double": 2750000,
+      "paket": "vip"
+    },
+    {
+      "_id": 131,
+      "judul": "Pekanbaru Ramadhan 2019",
+      "by": "Saudi Airlines",
+      "durasi": 14,
+      "quad": 33750000,
+      "triple": 2000000,
+      "double": 2500000,
+      "paket": "vvip"
+    }
+  ]
+}

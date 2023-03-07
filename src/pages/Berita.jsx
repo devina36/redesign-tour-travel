@@ -3,14 +3,12 @@ import { MdSearch } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { viewportContext } from '../App';
 import CardNews from '../components/CardNews';
-import Navbar from '../components/Navbar';
 import news from '../utils/news.json';
 
 const Berita = () => {
   const width = useContext(viewportContext);
   return (
     <>
-      <Navbar fixed={true} />
       <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
         <div className=" container mx-auto xl:px-12 lg:px-8 sm:px-4 px-5 ">
           <div className="flex relative w-full sm:w-3/5 lg:w-2/5 mx-auto justify-center items-center mb-8">

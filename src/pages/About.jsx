@@ -9,7 +9,6 @@ const About = () => {
   const width = useContext(viewportContext);
   return (
     <>
-      <Navbar fixed={true} />
       <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-20">
         <section className="grid grid-cols-12 gap-5 place-items-center container mx-auto px-8">
           <div className=" col-span-12 lg:col-span-7">

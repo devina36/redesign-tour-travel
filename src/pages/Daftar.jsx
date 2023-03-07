@@ -5,7 +5,6 @@ import Navbar from '../components/Navbar';
 const Daftar = () => {
   return (
     <>
-      <Navbar fixed={true} />
       <main className="min-h-[calc(100vh-210px)] sm:min-h-0 mt-10 sm:mt-[50px]">
         <div className=" container mx-auto xl:px-12 lg:px-8 sm:px-4 px-5 mb-10">
           <h2 className="font-bold text-2xl sm:text-2xl mb-4 sm:mb-5 border-b-2 text-myYellow border-myGreen w-fit">

@@ -26,7 +26,7 @@ const Hero = () => {
     // }
     if (width > 1023) {
       window.scrollTo({
-        top: ref.current.offsetTop + 500,
+        top: ref.current.offsetTop + 400,
         behavior: 'smooth',
       });
     } else {
@@ -61,10 +61,10 @@ const Hero = () => {
         <Slider {...settings} className="h-fit overflow-hidden">
           <div className="w-full relative h-fit -mb-2 overflow-hidden">
             <img src={hero} className="w-full lg:max-h-[700px] scale-[1.2]" alt="1" />
-            <div className="absolute h-full bg-myGreen/30 top-0 w-full">
-              <div className="flex flex-col h-full justify-center items-center w-4/5 sm:w-[90%] lg:w-3/5 mx-auto">
-                <h1 className=" text-white text-xl sm:text-[32px] sm:leading-[1.5] xl:text-[40px] font-bold mb-2 text-center">
-                  Bersama Kami, Anda Akan Merasakan Ibadah Yang Luar Biasa
+            <div className="absolute h-full bg-myGreen/20 top-0 w-full">
+              <div className="flex flex-col h-full justify-center items-center w-[90%] sm:w-3/4 md:w-[90%] lg:w-1/2 mx-auto">
+                <h1 className=" text-white text-xl sm:text-[32px] sm:leading-[1.5] lg:text-[40px] font-bold mb-2 text-center">
+                  Bersama Kami, Rasakan Ibadah Yang Luar Biasa
                 </h1>
                 <p className=" hidden sm:block text-center w-3/5 text-slate-100 mt-2 mb-5 leading-relaxed">
                   Solusi umrah tanpa banyak transit. Pelayanan berkualitas adalah prioritas kami.
@@ -72,7 +72,7 @@ const Hero = () => {
                 <button
                   ref={ref}
                   onClick={showPaket}
-                  className=" px-5 text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
+                  className=" px-5 active:bg-myYellow text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
                 >
                   Explore
                 </button>
@@ -82,8 +82,8 @@ const Hero = () => {
           <div className="w-full relative h-fit -mb-2 overflow-hidden">
             <img src={hero2} className="w-full lg:max-h-[700px] scale-[1.2]" alt="2" />
             <div className="absolute h-full bg-myGreen/30 top-0 w-full">
-              <div className="flex flex-col h-full justify-center items-center  w-4/5 sm:w-[90%] lg:w-3/5 mx-auto">
-                <h1 className="text-white text-xl sm:text-[32px] sm:leading-[1.5] xl:text-[40px] font-bold mb-2 text-center">
+              <div className="flex flex-col h-full justify-center items-center w-[90%] sm:w-3/4 md:w-[90%] lg:w-3/5 mx-auto">
+                <h1 className="text-white text-xl sm:text-[32px] sm:leading-[1.5] lg:text-[40px] font-bold mb-2 text-center">
                   Kunjungi Baitullah, Bawa Hati Penuh Iman
                 </h1>
                 <p className=" hidden sm:block text-center w-3/5 text-slate-100 mt-2 mb-5 leading-relaxed">
@@ -92,7 +92,7 @@ const Hero = () => {
                 <button
                   ref={ref}
                   onClick={showPaket}
-                  className=" px-5 text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
+                  className=" px-5 active:bg-myYellow text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
                 >
                   Explore
                 </button>
@@ -101,9 +101,9 @@ const Hero = () => {
           </div>
           <div className="w-full relative h-fit -mb-2 overflow-hidden">
             <img src={hero3} className="w-full lg:max-h-[700px] scale-[1.2]" alt="3" />
-            <div className="absolute h-full bg-myGreen/30 top-0 w-full">
-              <div className="flex flex-col h-full justify-center items-center  w-4/5 sm:w-[90%] lg:w-3/5 mx-auto">
-                <h1 className="text-white text-xl sm:text-[32px] sm:leading-[1.5] xl:text-[40px] font-bold mb-2 text-center">
+            <div className="absolute h-full bg-myGreen/20 top-0 w-full">
+              <div className="flex flex-col h-full justify-center items-center w-[90%] sm:w-3/4 md:w-[90%] lg:w-3/5 mx-auto">
+                <h1 className="text-white text-xl sm:text-[32px] sm:leading-[1.5] lg:text-[40px] font-bold mb-2 text-center">
                   Temukan petualangan barumu bersama kami!
                 </h1>
                 <p className=" hidden sm:block text-center w-3/5 text-slate-100 mt-2 mb-5 leading-relaxed">
@@ -112,7 +112,7 @@ const Hero = () => {
                 <button
                   ref={ref}
                   onClick={showPaket}
-                  className=" px-5 text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
+                  className=" px-5 active:bg-myYellow text-base sm:text-lg bg-[#003300] py-2 text-white font-semibold rounded-lg sm:w-[150px] self-center sm:py-3"
                 >
                   Explore
                 </button>

@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { viewportContext } from '../App';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   HiOutlineHome,
@@ -14,11 +13,7 @@ import {
   HiUserGroup,
 } from 'react-icons/hi2';
 
-const active = ' flex flex-col justify-center items-center relative w-fit';
-const noactive = ' flex flex-col justify-center items-center relative w-fit';
-
 const Tabbar = () => {
-  const width = useContext(viewportContext);
   return (
     <footer className=" sticky shadows bottom-0 px-10 py-4 bg-white">
       <ul className="flex flex-row justify-between ">
